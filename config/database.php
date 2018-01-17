@@ -1,5 +1,23 @@
 <?php
 
+if (getenv('JAWSDB_URL')) {
+    $jawsdb_url = parse_url(getenv('JAWSDB_URL'));
+
+    putenv('DB_HOST='.$jawsdb_url['host']);
+    putenv('DB_PORT='.$jawsdb_url['port']);
+    putenv('DB_USERNAME='.$jawsdb_url['user']);
+    putenv('DB_PASSWORD='.$jawsdb_url['pass']);
+    putenv('DB_DATABASE='.substr($jawsdb_url['path'], 1));
+}
+
+if (getenv('REDIS_URL')) {
+    $redis_url = parse_url(getenv('REDIS_URL'));
+
+    putenv('REDIS_HOST='.$redis_url['host']);
+    putenv('REDIS_PASSWORD='.$redis_url['pass']);
+    putenv('REDIS_PORT='.$redis_url['port']);
+}
+
 return [
 
     /*
