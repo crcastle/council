@@ -1,0 +1,23 @@
+{
+  "name": "Council",
+  "description": "An open source forum built on Laravel.",
+  "repository": "https://github.com/JeffreyWay/council",
+  "env": {
+    "APP_KEY": {
+      "description": "An encryption key used by Laravel to encrypt user sessions and other information. Generate this by running `php artisan key:generate --show`.",
+      "required": false
+    }
+  },
+  "addons": [
+    "jawsdb:kitefin",
+    "heroku-redis:hobby-dev"
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-php"
+    }
+  ]
+}
