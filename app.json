@@ -4,7 +4,7 @@
   "repository": "https://github.com/JeffreyWay/council",
   "env": {
     "APP_KEY": {
-      "description": "An encryption key used by Laravel to encrypt user sessions and other information. Generate this by running `php artisan key:generate --show`.",
+      "description": "An encryption key used by Laravel to encrypt user sessions and other information. Generate this by running `php artisan key:generate --show`. You can set this after deploy too.",
       "required": false
     }
   },
